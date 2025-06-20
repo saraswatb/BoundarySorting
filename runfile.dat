@@ -1,0 +1,66 @@
+model    = TwoFluidWetting
+nsteps   = 400000
+nstart   = 0
+ninfo    = 4000
+LX       = 160
+LY       = 160
+bc	 = 0 
+
+rho1      = 20
+rho2      = 20
+friction1 = 0.0
+friction2 = 0.0
+rel_fric  = 0.1
+
+tau1   = 1.00
+tau2   = 1.00
+
+landA  = 0.0001
+landB  = 0.0000
+KK     = 0
+LL12   = 0.0
+
+GammaQ1   = 0.33
+CC1	  = 0.001
+LL1	  = 0.02
+zeta1	  = 0.005
+xi1	  = 0.7
+Q_kBT	  = 0.0
+Snem1	  = 0.0
+
+GammaQ2   = 0.0
+CC2	  = 0.0
+LL2	  = 0.0
+zeta2	  = 0.0
+xi2	  = 0.0
+Snem2	  = 0.0
+
+nsteps_FD = 1
+isGuo     = false
+n_preinit = 100
+#init_seed = 9876543
+
+W_anchor     = 0
+theta_anchor = 0
+#h_surf       = HSURFD
+L_thermo     = 0
+
+# initial configuration options...
+config 	= Circle
+radius  = 60
+level   = 0.5   
+noise   = 1.0
+angle   = 0
+
+#new Phi pars
+extraVisc = 10 #6 # 10 #
+modFE = 1
+massRealloc = false
+nRealloc = 1
+modFric = 10 #1
+modRF = 10 #1 # 10 # 20 # 
+phi_FreeE   = true
+backflow_on = true
+
+act_start_timer = 0
+act_stop_timer = 10000000
